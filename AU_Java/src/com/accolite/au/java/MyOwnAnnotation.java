@@ -7,24 +7,30 @@ import java.io.IOException;
 public class MyOwnAnnotation {
 
 	public static void main(String[] args) throws IOException {
-		Test obj = new Test();
-		Servlet ann = obj.getClass().getAnnotation(Servlet.class);
-		
-		File file = new File("C:\\Users\\sushant.gundla\\Desktop\\Annotation.xml");
-		FileWriter writer = new FileWriter(file);
-		writer.write("Servlet");
-		writer.write(String.format("<name> %s </name>\n",ann.name()));
-		writer.write(String.format("<url> %s </url>\n",ann.url()));
-		writer.write(String.format("<class_name> %s </class_name>\n",obj.getClass().getName()));
-		writer.write("</Servlet>\n");
-		writer.close();
+		new Test();
 	}
 
 }
 
+
 @Servlet(name="Sushant",url="www.google.com")
 class Test{
-	static int value = 10;
+	String name;
+	String url;
+	String class_name;
+	
+	Test() throws IOException{
+		Servlet ann = this.getClass().getAnnotation(Servlet.class);
+		
+		File file = new File("C:\\Users\\sushant.gundla\\Desktop\\Annotation.xml");
+		FileWriter writer = new FileWriter(file);
+		writer.write("<Servlet>\n");
+		writer.write(String.format("<name> %s </name>\n",ann.name()));
+		writer.write(String.format("<url> %s </url>\n",ann.url()));
+		writer.write(String.format("<class_name> %s </class_name>\n",this.getClass().getName()));
+		writer.write("</Servlet>\n");
+		writer.close();
+	}
 }
 
 @Retention(RetentionPolicy.RUNTIME)  
