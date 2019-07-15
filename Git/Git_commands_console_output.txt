@@ -1,0 +1,119 @@
+
+sushant.gundla@SUGU-BLR-01 MINGW64 ~/Desktop
+$ git clone https://github.com/Sharpyyy/MY_PROJECT.git
+Cloning into 'MY_PROJECT'...
+warning: You appear to have cloned an empty repository.
+
+sushant.gundla@SUGU-BLR-01 MINGW64 ~/Desktop
+$ cd MY_PROJECT/
+
+sushant.gundla@SUGU-BLR-01 MINGW64 ~/Desktop/MY_PROJECT (master)
+$ code myfile.py
+
+sushant.gundla@SUGU-BLR-01 MINGW64 ~/Desktop/MY_PROJECT (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        myfile.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+sushant.gundla@SUGU-BLR-01 MINGW64 ~/Desktop/MY_PROJECT (master)
+$ git add .
+
+sushant.gundla@SUGU-BLR-01 MINGW64 ~/Desktop/MY_PROJECT (master)
+$ git commit -m "initial"
+[master (root-commit) 3b3c646] initial
+ 1 file changed, 92 insertions(+)
+ create mode 100644 myfile.py
+
+sushant.gundla@SUGU-BLR-01 MINGW64 ~/Desktop/MY_PROJECT (master)
+$ git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 1.15 KiB | 234.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/Sharpyyy/MY_PROJECT.git
+ * [new branch]      master -> master
+
+sushant.gundla@SUGU-BLR-01 MINGW64 ~/Desktop/MY_PROJECT (master)
+$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (1/1), done.
+remote: Total 3 (delta 1), reused 3 (delta 1), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/Sharpyyy/MY_PROJECT
+   3b3c646..eff0281  master     -> origin/master
+Updating 3b3c646..eff0281
+Fast-forward
+ myfile.py | 2 ++
+ 1 file changed, 2 insertions(+)
+
+sushant.gundla@SUGU-BLR-01 MINGW64 ~/Desktop/MY_PROJECT (master)
+$ code myfile.py
+
+sushant.gundla@SUGU-BLR-01 MINGW64 ~/Desktop/MY_PROJECT (master)
+$ git add .
+
+sushant.gundla@SUGU-BLR-01 MINGW64 ~/Desktop/MY_PROJECT (master)
+$ git commit -m "Sam's edit"
+[master 3428985] Sam's edit
+ 1 file changed, 1 insertion(+), 5 deletions(-)
+
+sushant.gundla@SUGU-BLR-01 MINGW64 ~/Desktop/MY_PROJECT (master)
+$ git push
+To https://github.com/Sharpyyy/MY_PROJECT.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/Sharpyyy/MY_PROJECT.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+sushant.gundla@SUGU-BLR-01 MINGW64 ~/Desktop/MY_PROJECT (master)
+$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (1/1), done.
+remote: Total 3 (delta 1), reused 3 (delta 1), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/Sharpyyy/MY_PROJECT
+   eff0281..9feb42b  master     -> origin/master
+Auto-merging myfile.py
+hint: Waiting for your editor to close the file...
+[main 2019-07-10T17:43:59.351Z] update#setState idle
+Merge made by the 'recursive' strategy.
+ myfile.py | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+sushant.gundla@SUGU-BLR-01 MINGW64 ~/Desktop/MY_PROJECT (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+sushant.gundla@SUGU-BLR-01 MINGW64 ~/Desktop/MY_PROJECT (master)
+$ code myfile.py
+
+sushant.gundla@SUGU-BLR-01 MINGW64 ~/Desktop/MY_PROJECT (master)
+$ git push
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 603 bytes | 86.00 KiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/Sharpyyy/MY_PROJECT.git
+   9feb42b..9a61d0d  master -> master
