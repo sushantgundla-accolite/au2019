@@ -1,0 +1,13 @@
+<div style="margin:0 auto;">
+    <table align="center" style="width:50%;padding:10px">
+        <tr>
+            <th>Department Id</th>
+            <th>Department Name</th>
+        </tr>
+        <tr *ngFor="let dept of DepartmentData">
+            <!-- route to department details -->
+            <td bgcolor="#CCCCCC" (click)="goToDetails(dept)">{{dept.departmentId}}</td>
+            <td>{{dept.departmentName}}</td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,35 @@
+<!-- Do not sohw on todo unless you click the employeeId -->
+<div *ngIf = "router.url.substring(1) != 'todo'" style="float: center">
+    <h4> UserId: &nbsp; {{recievedEmployee.userId}} </h4>
+    <table align="center" style="width:70%;padding:6px;">
+        <tr>
+            <th>Attribute</th>
+            <th> Current Value</th>
+            <th *ngIf = "router.url == '/employee/' + recievedEmployee.userId"> Update Value </th>
+        </tr>
+        <tr>
+            <td>FirstName</td>
+            <td>{{recievedEmployee.firstName}}</td>
+                <!-- Update functionality only on employee/userId route not on todo-->
+                <td *ngIf = "router.url == '/employee/' + recievedEmployee.userId"><input type="text" [(ngModel)]="recievedEmployee.firstName"></td>
+        </tr>
+        <tr>
+            <td>LastName</td>
+            <td>{{recievedEmployee.lastName}}</td>
+                <!-- Update functionality only on employee/userId route not on todo-->
+                <td *ngIf = "router.url == '/employee/' + recievedEmployee.userId"><input type="text" [(ngModel)]="recievedEmployee.lastName"></td>
+        </tr>
+        <tr>
+            <td>Department Id</td>
+            <td>{{recievedEmployee.departmentId}}</td>
+                <!-- Update functionality only on employee/userId route not on todo-->
+                <td *ngIf = "router.url == '/employee/' + recievedEmployee.userId"><input type="text" [(ngModel)]="recievedEmployee.departmentId"></td>
+        </tr>
+        <tr>
+                <td>Email Address</td>
+                <!-- Update functionality only on employee/userId route not on todo-->
+                <td>{{recievedEmployee.emailAddress}}</td>
+                <td *ngIf = "router.url == '/employee/' + recievedEmployee.userId"><input type="text" [(ngModel)]="recievedEmployee.emailAddress"></td>
+            </tr>
+    </table>
+</div>

@@ -1,0 +1,22 @@
+<div style="float: center">
+        <h4> Department Id: &nbsp; {{recievedDepartment.userId}} </h4>
+        <table align="center" style="width:70%;padding:6px;">
+            <tr>
+                <th>Attribute</th>
+                <th> Current Value</th>
+                <th> Update Value </th>
+            </tr>
+            <tr>
+                <td>Department Name</td>
+                <td>{{recievedDepartment.departmentName}}</td>
+                <!-- Update functionality -->
+                <td><input type="text" [(ngModel)]="recievedDepartment.departmentName"></td>
+            </tr>
+            <tr>
+                <td>Number of Employees</td>
+                <td>{{recievedDepartment.noOfEmployees}}</td>
+                <!-- Update functionality -->
+                <td ><input type="text" [(ngModel)]="recievedDepartment.noOfEmployees"></td>
+            </tr>
+        </table>
+    </div>
