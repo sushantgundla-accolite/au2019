@@ -69,6 +69,9 @@
 12. Bagging
 13. Ensemble (all above models)
 
+**ML Model COmparison**
+![ML Models Comparison](https://user-images.githubusercontent.com/52782749/63433737-6bae1580-c441-11e9-910c-64f9c6036f80.png)
+
 ### DL Models
 1. Conv1D
 2. LSTM
@@ -80,7 +83,38 @@
 8. BERT
 9. XLNET
 
+**DL Model COmparison**
+![DL Models Comparison](https://user-images.githubusercontent.com/52782749/63433680-48836600-c441-11e9-9624-cb92ab49c49e.png)
+
+## Bert and XLNet - Expectations
+
+- Bert(Base) trained on sample data for 5 epochs gave 89.55% accuracy.
+- With increase in number of samples and number of epochs, Bert is considered to perform better than most of the models.
+
+- XLNet(Base) trained on sample data for 50 epochs gave 87.66% accuracy.
+- XLNet is considered to outperform even BERT with increase in data.
+
+## Conclusions
+- The ML models give better accuracy with the given sample data as compared to  Deep Learning model.
+- As the data increases, the Deep Learning model is considered to give more accurate results.
+
+## Next Steps
+- Bigger data set - 6.5mil+ records.
+- Run Top 5 ML and DL models on the data set and filter top 3 models.
+- Test on shortlisted models with the additional data and share the results.
+- Work on second model for ‘Category’ prediction.
+- Automate SpellCheck and replace
+- Try some new techniques:
+  - BioASQ - PubMed + Word2Vec
+  - PubMed + PMC
+  - Doc2Vec
+
 ##
+
+
+
+
+
 
 
 
